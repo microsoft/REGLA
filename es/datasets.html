@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Information about REGLA Dataset">
+		<meta name="author" content="Jesse Freitas">
+		<title>REGLA</title>
+		<!-- Bootstrap core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="../css/scrolling-nav.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
+		<link href="../css/fa-all.css" rel="stylesheet">
+		<link rel="stylesheet" href="../css/academicons.min.css" />
+		<link rel="stylesheet" href="https://www.microsoft.com/onerfstatics/marketingsites-eus-prod/west-european/shell/_scrf/css/themes=default.device=uplevel_web_pc/31-9d5f3f/79-6aa410/c6-ce4cc7/f3-7d8ce1/18-6a72f8/26-12908c/88-de543b/18-e17dee?ver=2.0" type="text/css" media="all">
+		<script type="text/javascript">
+			function gen_mail_to_link(lhs,rhs,subject,hypertext) {
+				document.write("<a href=\"mailto");
+				document.write(":" + lhs + "@");
+				document.write(rhs + "?subject=" + subject + "\">" + hypertext + "<\/a>");
+			}
+		</script>
+		    <script type="text/javascript">
+				var clicked = false;
+				function addDownloadLink() {
+					if (document.getElementById("TA").checked == true) {
+						//Usefulness
+						if (!clicked) {
+							let allElements = Array.from(document.querySelectorAll('.disabled'))
+							for (let element of allElements) {
+								element.classList.remove('disabled')
+								element.disabled = false
+							}
+							//document.getElementById("xgluedata").innerHTML += "<a class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://msmarco.blob.core.windows.net/xglue/xglue_public.tar.gz\">XGLUE Data</a>"
+							//document.getElementById("xgluedata").innerHTML += "<a id=\"downloadLink\" class=\"btn btn-primary btn-md\" style='margin-right: 3px;' href=\"https://xglue.blob.core.windows.net/xglue/xglue_full_dataset.tar.gz\">REGLA Data with Test</a>"
+							clicked = true;
+						}
+					} else {
+						alert("Please Agree to our conditions to download the dataset")
+					}
+				}
+			</script>
+			<style>
+				code {
+					  font-family: Consolas,"courier new";
+					  color: black;
+					  background-color: #f1f1f1;
+					  padding: 2px;
+					  font-size: 90%;
+					}
+			</style>
+	</head>
+	<body id="page-top">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top topnav" id="mainNav">
+			<div class="container">
+				<link rel='shortcut icon' type='image/x-icon' href='../favicon.ico' />
+				<img src="../img/REGLA.svg" />
+				<a class="navbar-brand js-scroll-trigger" href="#page-top">REGLA</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../es/index.html">Overview</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../es/datasets.html">Datasets</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="mailto:regla@microsoft.com">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="../en/index.html">English</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- <section id="why">
+			<div class="container">
+				<div class="tablebg" style="display: flex; flex-direction: row;">
+					<img style="margin: 0px 64px 0px 40px;" src="../img/globe.svg"/>
+					<div>
+						<h2>Why REGLA?</h2>
+						<p>Spanish is the second-most spoken language in the world, with over 500M native speakers. REGLA is a dedicated benchmark for the development of socially-responsible and inclusive NLP in this language.</p>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<section id="leaderboard">
+			<div class="container">
+				<div style="margin-top:104px;">
+					<div class="table-responsive">
+						<h2>Datasets</h2>
+						<div class="checkbox">
+							<div style="display: flex;">
+								<input onchange="addDownloadLink()" type="checkbox" name="termAgreed" id="TA" value="true" style="height:36px;width:16px;" />
+								<p style="height: 36px;margin: 0px 12px;line-height: 32px;">I agree to terms and conditions. Upon accepting links to dataset will become available.</p>
+							</div>
+							<button id="downloadAll" class="disabled">Download all data</button>
+						</div>
+						<!--<h4>Tasks</h4>
+						<ol>
+							<li>NER</li>
+							<li>POS Tagging (POS)</li>
+							<li>News Classification (NC)</li>
+							<li>MLQA</li>
+							<li>XNLI</li>
+							<li>PAWS-X</li>
+							<li>Query-Ad Matching (QADSM)</li>
+							<li>Web Page Ranking (WPR)</li>
+							<li>QA Matching (QAM)</li>
+							<li>Question Generation (QG)</li>
+							<li>News Title Generation (NTG)</li>
+						</ol>
+						<h4>Relevant Links</h4>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/REGLA">REGLA Submission Guideline/Github</a>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://arxiv.org/abs/2004.01401">REGLA Paper</a>
+						<a class="btn btn-primary btn-md" style='margin-right: 3px;' href="https://github.com/microsoft/Unicoder">Unicoder Baseline</a>
+						<div class="row">&nbsp;</div>
+						<div id="xgluedata"> </div>
+						<div class="row">&nbsp;</div>-->
+						<div class="tablebg">
+							<h5> </h5>
+							<div style="text-align:left">
+								<table>
+								<thead >
+									<tr>
+										<th class="col-md-1">Name</th>
+										<th class="col-md-1">Identifier</th>
+										<th class="col-md-1">Metric</th>
+										<th class="col-md-1">More Info</th>
+										<th class="col-md-1">Download</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tbody>
+										<tr class="dataset">
+											<td>Anaphora Resolution</td>
+											<td>WNLI (es)</td>
+											<td>2022-09-23</a></td>
+											<td><img src="../img/infoIcon.svg"><a href="" class="linkButton">Info</a></td>
+											<td><img class="disabled" src="../img/downloadIcon.svg"><a href="" class="linkButton disabled">Download</a></td>
+										</tr>
+										<tr class="dataset">
+											<td>TBD</td>
+											<td>CALE</td>
+											<td>2022-09-23</a></td>
+											<td><img src="../img/infoIcon.svg"><a href="" class="linkButton">Info</a></td>
+											<td><img class="disabled" src="../img/downloadIcon.svg"><a href="" class="linkButton disabled">Download</a></td>
+										</tr>
+										<tr class="dataset">
+											<td>Question Answering</td>
+											<td>SQAC</td>
+											<td>2022-09-23</a></td>
+											<td><img src="../img/infoIcon.svg"><a href="" class="linkButton">Info</a></td>
+											<td><img class="disabled" src="../img/downloadIcon.svg"><a href="" class="linkButton disabled">Download</a></td>
+										</tr>
+										<tr class="dataset">
+											<td>Question Answering</td>
+											<td>COMP(a)DRE</td>
+											<td>2022-09-23</a></td>
+											<td><img src="../img/infoIcon.svg"><a href="" class="linkButton">Info</a></td>
+											<td><img class="disabled" src="../img/downloadIcon.svg"><a href="" class="linkButton disabled">Download</a></td>
+										</tr>
+										<tr class="dataset">
+											<td>Simpler Language</td>
+											<td>CLaro</td>
+											<td>2022-09-23</a></td>
+											<td><img src="../img/infoIcon.svg"><a href="" class="linkButton">Info</a></td>
+											<td><img class="disabled" src="../img/downloadIcon.svg"><a href="" class="linkButton disabled">Download</a></td>
+										</tr>
+										<tr class="dataset">
+											<td>Conciseness</td>
+											<td>BReVe</td>
+											<td>2022-09-23</a></td>
+											<td><img src="../img/infoIcon.svg"><a href="" class="linkButton">Info</a></td>
+											<td><img class="disabled" src="../img/downloadIcon.svg"><a href="" class="linkButton disabled">Download</a></td>
+										</tr>
+										<tr class="dataset">
+											<td>Fake News Detection</td>
+											<td>FACT</td>
+											<td>2022-09-23</a></td>
+											<td><img src="../img/infoIcon.svg"><a href="" class="linkButton">Info</a></td>
+											<td><img class="disabled" src="../img/downloadIcon.svg"><a href="" class="linkButton disabled">Download</a></td>
+										</tr>
+										<tr class="dataset">
+											<td>Paraphrase Identification (Adversarial)</td>
+											<td>PAWS-X</td>
+											<td>2022-09-23</a></td>
+											<td><img src="../img/infoIcon.svg"><a href="" class="linkButton">Info</a></td>
+											<td><img class="disabled" src="../img/downloadIcon.svg"><a href="" class="linkButton disabled">Download</a></td>
+										</tr>
+										
+								</tbody>
+							</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="intro">
+			<div class="container">
+				<div>
+					<h2>Important Updates</h2> 
+				</div>
+				<div>
+					<div class="item">2022-23-09<br/>inital site created, baseline work started<br/></div>
+				</div>
+				<!-- <div class="row">
+					<button type="button" class="btn btn-primary btn-default" onclick='return addDownloadLink()'>Submit</button>
+				</div> -->
+			</div>
+		</section>
+		<!-- <section id="contact" class="bg-light">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 mx-auto">
+						<h1>REGLA Submission Instructions</h1>
+						<p>Once you have built a model that meets your expectations on evaluation with the dev set, you can submit your test results to get official evaluation on the test set. To ensure the integrity of the official test results, we do not release the correct answers for test set to the public. To submit your model for official evaluation on the test set, follow the below steps:</p>
+						<ol>
+							<li>Generate your prediction output for the dev set.</li>
+							<li>Run the official evaluation methodologies found in the task specific git repo and verify your systems are running as expected.</li>
+							<li>Generate your prediction output for the test set and submit the following information by <script type="text/javascript">gen_mail_to_link('REGLA','microsoft.com','REGLA Submission','emailing us');</script>.</li>
+						</ol>
+						<p>Your email should include:</p>
+						<ol>
+							<li>Prediction results on test set. [Required]</li>
+							<li>Prediction results on dev set. [Recommended]</li>
+							<li>Individual/Team Name: Name of the individual or the team to appear in the leaderboard. [Required]</li>
+							<li>Individual/Team Institution: Name of the institution of the individual or the team to appear in the leaderboard. [Optional]</li>
+							<li>Model code: Training code for the model. [Recommended]</li>
+							<li>Model information: Name of the model/technique to appear in the leaderboard, whether used translated data in fine-tuning, the parameter number of model. [Required]</li>
+							<li>Paper Information: Name, Citation, URL of the paper if model is from a published work to appear in the leaderboard. [Optional]</li>
+						</ol>
+						<p>To avoid "P-hacking" we discourage too many submissions from the same group in a short period of time.</p>
+           	 		</div>
+        		</div>
+			</div>
+		</section> -->
+		
+		<div class="footer">
+			<div><img style="margin: 16px 20px;" src="../img/mslogo.svg"/></div>
+			<div style="margin: 16px 20px;">
+				<a class="footerlink" href="">Privacy</a>
+				<a class="footerlink" href="">Terms & Conditions</a>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript -->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.bundle.min.js"></script>
+		<!-- Plugin JavaScript -->
+		<script src="../js/jquery.easing.min.js"></script>
+		<script src="../js/scrolling-nav.js"></script>
+		<script>
+			var rankings = ['xgluetable', 'xgluetable2', 'xgluetable3']
+			for(var j=0; j < rankings.length; j++) {
+				var rows = document.getElementById(rankings[j]).rows;
+				for(var i = 1, td; i < rows.length; i++){
+					td = document.createElement('td');
+					td.appendChild(document.createTextNode(i));
+					rows[i].insertBefore(td, rows[i].firstChild);
+				}
+			}
+		</script>
+	</body>
+</html>

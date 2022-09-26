@@ -312,3 +312,55 @@ p {
 .footerlink:hover {
 	color: #FFFFFF;
 }
+
+.linkButton, .linkButton:hover, .linkButton:active {
+	font-family: 'Segoe UI';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+	/* identical to box height, or 133% */
+
+	letter-spacing: 0.001em;
+	margin: 6px;
+	vertical-align: middle;
+
+	color: #588FEB;
+}
+.linkButton[disabled="true"], .disabled {
+	opacity: 0.44;
+}
+
+.dataset {
+	height: 45px;
+	border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+button {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 12px 7px;
+	gap: 8px;
+
+	background: #588FEB;
+	border-radius: 4px;
+	font-family: 'Segoe UI';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 20px;
+	/* identical to box height, or 143% */
+
+	letter-spacing: 0.002em;
+
+	color: #141414;
+}
+
+.checkbox {
+	display: flex;
+	width: 1110px;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
