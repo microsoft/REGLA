@@ -276,6 +276,30 @@ p {
 	width: 592px;
 }
 
+p.name {
+	font-weight: 600;
+	margin: 0px;
+	opacity: 1;
+}
+
+ol.text, li.text {
+	font-family: 'Segoe UI';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	/* or 143% */
+
+	letter-spacing: 0.001em;
+
+	/* Neutral/White */
+
+	color: #FFFFFF;
+
+	opacity: 0.66;
+	width: 592px;
+}
+
 .footer {
 	/* Rectangle 121 */
 	height: 56px;
@@ -336,7 +360,7 @@ p {
 	border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-button {
+button, a.button {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -354,6 +378,7 @@ button {
 	/* identical to box height, or 143% */
 
 	letter-spacing: 0.002em;
+	height: 32px;
 
 	color: #141414;
 }
@@ -363,4 +388,16 @@ button {
 	width: 1110px;
 	justify-content: space-between;
 	margin-bottom: 20px;
+}
+
+img.persona {
+	height: 176px;
+	width: 176px;
+	border-radius: 12px;
+	margin-bottom: 20px;
+}
+
+.personaContainer {
+	width: 176px;
+	margin-right: 30px;
 }
